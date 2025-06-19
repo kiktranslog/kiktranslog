@@ -1,3 +1,4 @@
+
 /* styles.css */
 body {
   margin: 0;
@@ -22,7 +23,7 @@ header .container {
 }
 
 .logo {
-  height: 180px;
+  height: 60px;
 }
 
 nav ul {
@@ -60,25 +61,6 @@ section {
   margin: 0 auto;
 }
 
-section#about ul {
-  list-style: none;
-  padding-left: 0;
-  margin-top: 20px;
-}
-
-section#about ul li {
-  position: relative;
-  padding-left: 25px;
-  margin-bottom: 10px;
-}
-
-section#about ul li::before {
-  content: "✔️";
-  position: absolute;
-  left: 0;
-  top: 0;
-}
-
 footer {
   background-color: #003366;
   color: white;
@@ -86,3 +68,109 @@ footer {
   padding: 20px 0;
   font-size: 0.9em;
 }
+
+/* === Home Section Adjustments === */
+.hero {
+  background-color: #0055a5;
+  color: white;
+  padding: 80px 20px;
+  text-align: left; /* Change from center to align with logo */
+}
+
+.hero .container {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.logo-wrapper {
+  flex: 0 0 auto;
+}
+
+.logo-wrapper img {
+  height: 150px;
+  width: auto;
+}
+
+.home-text {
+  flex: 1;
+  font-size: 1.6em;
+  line-height: 1.4;
+}
+
+/* Responsive fallback */
+@media (max-width: 768px) {
+  .hero .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .logo-wrapper img {
+    height: 120px;
+  }
+
+  .home-text {
+    font-size: 1.3em;
+  }
+}
+
+.hero .container {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.logo-wrapper {
+  flex: 0 0 auto;
+}
+
+.logo-wrapper img {
+  height: 150px;
+  width: auto;
+}
+
+.home-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.line1 {
+  font-size: 2.2em;
+  margin: 0;
+}
+
+.line2 {
+  font-size: 3em;
+  font-weight: bold;
+  margin: 0;
+}
+
+.subtitle {
+  font-size: 1.4em;
+  margin-top: 10px;
+}
+
+/* Responsive adjustment */
+@media (max-width: 768px) {
+  .hero .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .logo-wrapper img {
+    height: 120px;
+  }
+
+  .line1, .line2 {
+    font-size: 2em;
+  }
+
+  .subtitle {
+    font-size: 1.2em;
+  }
+}
+
